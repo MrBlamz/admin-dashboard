@@ -25,11 +25,6 @@
   grid-template-rows: 1fr 4fr;
 }
 
-/* ! Visual reference only - to be removed when project is done */
-.container > div {
-  border: 1px solid black;
-}
-
 /* Sidebar */
 
 .sidebar {
@@ -97,6 +92,102 @@
 .header {
   grid-column: 2;
   grid-row: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem 4rem;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.header__searchbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchbar__icon {
+  width: 24px;
+}
+
+.searchbar__input {
+  width: 100%;
+  padding: 7.5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: #e2e8f0;
+}
+
+.searchbar__input:focus-visible {
+  border: 2px solid black;
+}
+
+.header__user-info {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header__user-info--left-aligned {
+  justify-self: start;
+}
+
+.header__user-info > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+.user-info__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.user-info__button__icon {
+  width: 24px;
+}
+
+.user-info__avatar {
+  border-radius: 50%;
+  width: 44px;
+}
+
+.user-info__avatar--big {
+  width: 68px;
+}
+
+.user-info__username {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.user-info__username--big {
+  font-size: 1.5rem;
+}
+
+.user-info__greeting {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.header__buttons {
+  justify-self: end;
+  align-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+.header__button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Main Content */
